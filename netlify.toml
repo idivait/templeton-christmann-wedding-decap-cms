@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/rsvp"
+  to = "https://templetonchristmannwedding.fillout.com/rsvp"
+  status = 301
+  force = true
