@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    html {
+        @apply bg-navy;
+        @apply text-stone-100;
+        @apply font-josefin;
+    }
+    h1 {
+        @apply text-2xl;
+    }
+    h2 {
+        @apply text-xl;
+    }
+    main p {
+        @apply py-2;
+    }
+}
+@layer components {
+    .button {
+        @apply border border-2 border-blush-dark bg-blush rounded hover:bg-blush-dark py-2 px-3 pt-3 font-bold text-lg focus:border-stone-100;
+    }
+}
