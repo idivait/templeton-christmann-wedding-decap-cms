@@ -8,5 +8,8 @@
  * @type {import('gatsby').GatsbySSR['onRenderBody']}
  */
 exports.onRenderBody = ({ setHtmlAttributes }) => {
-  setHtmlAttributes({ lang: `en` })
+  setHtmlAttributes({ 
+    className: `bg-blue-900 text-stone-100`,
+    lang: `en` 
+  })
 }
