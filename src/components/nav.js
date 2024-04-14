@@ -3,11 +3,9 @@ import { Link } from "gatsby"
 
 const Nav = ()=>{
     const navLinks = [
-        { path: `/`, name: `About`},
-        // { path: `/blog/`, name: `Blog`},
         { path: `/rsvp`, name: `RSVP`, external: true},
-        { path: `/lodging`, name: `Lodging`},
-        { path: `/faq/`, name: `FAQs`},
+        // { path: `/about`, name: `About Eureka`},
+        // { path: `/faq/`, name: `FAQs`},
         // { path: `/registry`, name: `Registry`}
       ]
     return (

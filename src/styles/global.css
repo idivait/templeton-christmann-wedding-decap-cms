@@ -19,8 +19,3 @@
         @apply py-2;
     }
 }
-@layer components {
-    .button {
-        @apply border border-2 border-blush-dark bg-blush rounded hover:bg-blush-dark py-2 px-3 pt-3 font-bold text-lg focus:border-stone-100;
-    }
-}

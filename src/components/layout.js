@@ -12,7 +12,7 @@ const Layout = ({ location, title, children }) => {
   )
 
   return (
-    <div data-is-root-path={isRootPath}>
+    <div className="h-full" data-is-root-path={isRootPath}>
       <header className="w-full flex flex-col md:flex-row justify-end items-center bg-blush text-navy p-4">
         {header}
         <Nav/>
