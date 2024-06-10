@@ -1,10 +1,12 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Page from "../components/page"
 import { ActionButtonList } from "../components/buttons"
+import { SidebarContent, SidebarImage } from "../components/sidebar"
+import { HalfLine } from "../components/text"
+import { AltOverlay } from "../components/image"
 
 const FeaturedVendorList = ({list})=>(
   <>
@@ -32,35 +34,30 @@ const Index = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle} page="About">
       <Page className="text-center">
-        <div className="flex flex-col sm:flex-row text-lg max-w-screen-lg mx-4 lg:mx-auto rounded ring ring-blush ring-inset outline outline-blush outline-offset-4 p-4 mb-6">
-          <aside className="basis-3/4">
-            <Img
-            className="object-cover rounded h-full w-full"
-              fluid={data.primaryImage.childImageSharp.fluid}
-              alt="A picture of downtown Eureka Springs"
-            />
-          </aside>
-          <content className="p-2 md:px-8 text-sm sm:text-base">
+          <SidebarImage image={data.primaryImage} alt="Logo Design by Chad Gurley">
+          </SidebarImage>
+          <SidebarContent>
             <p>You are invited to</p>
             <h2 className="text-3xl font-bold">
-              The Templeton-Christmann Wedding Reception
+              The Templeton-Christmann After Party
             </h2>
             <p>
-              Saturday, September 7th at 6PM
-              <br />
+Saturday, September 7th, 2024 at 5pm
+</p><p>
               Eureka Springs Community Center
+              <br/>
+              44 Kingshighway
+              <br/>
+              Eureka Springs, AR 72632
             </p>
-            <hr className="w-1/2 mx-auto border-blush border-2 rounded my-4" />
+            <HalfLine/>
             <p>
-              Sandra and Charles Templeton invite you to the wedding reception
-              of their daughter, Carolyn-Anne Templeton, to Andrew Christmann,
-              son of Margaret and David Christmann.
+            We will be exchanging vows in a small private ceremony on September 7th, 2024 in Eureka Springs, Arkansas.
             </p>
+            <p>Please join us for our wedding reception.</p>
             <p className="font-bold">Please RSVP before <span className="text-blush">August 7th.</span></p>
             <ActionButtonList />
-          </content>
-
-        </div>
+          </SidebarContent>
         {/* <FeaturedVendorList list={vendorList} /> */}
       </Page>
     </Layout>
@@ -83,7 +80,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    primaryImage: file(relativePath: { eq: "eurekaclintonsteeds.jpg"} ) {
+    primaryImage: file(relativePath: { eq: "chadgurleyreception.png"} ) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

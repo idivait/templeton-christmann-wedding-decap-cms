@@ -15,7 +15,11 @@ const Page = ({className, children, content})=>{
                 itemProp="articleBody"
             />
         )}
-        <section className={className}>{children}</section>
+        <section className={className}>
+          <div className="flex flex-col sm:flex-row text-lg max-w-screen-lg mx-4 lg:mx-auto rounded ring ring-blush ring-inset outline outline-blush outline-offset-4 p-4 mb-6">
+            {children}
+          </div>
+        </section>
 
       </article>
     )

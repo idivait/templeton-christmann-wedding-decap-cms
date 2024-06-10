@@ -8,7 +8,7 @@ export const Dropdown = ({children, className})=>(
 )
 
 export const Button = ({children, link, className, onClick})=>{
-    const buttonStyle = `ring-2 ring-blush bg-blush rounded hover:bg-blush-dark py-2 px-3 pt-3 font-bold text-lg focus:border-stone-100 w-full flex items-center justify-center ${className}`;
+    const buttonStyle = `ring-2 ring-blush bg-blush rounded hover:bg-orange py-2 px-3 pt-3 font-bold text-lg focus:border-stone-100 w-full flex items-center justify-center ${className}`;
     if (link) {
         return (
             <a className={buttonStyle} href={link}>
