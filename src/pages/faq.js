@@ -72,6 +72,7 @@ const FAQPage = ({ data, location }) => {
         </SidebarImage>
         <SidebarContent>
           <h2>Where should I stay?</h2>
+          <HalfLine />
           <p>Eureka has a plethora of BnBs and hotels. We will have more specific recommendations soon, but in the meantime if you're looking to book, the CAPC has a good list to get started:</p>
           <Button link="https://www.visiteurekasprings.com/category/where-to-stay/" className="bg-navy pt-2 pl-2 mt-4 w-auto inline-flex" >Eureka Springs Lodging</Button>
         </SidebarContent>
