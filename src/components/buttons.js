@@ -31,7 +31,7 @@ const AddToCalendar = ()=>{
     description: 'At the Highlander Room of the Eureka Springs Community Center.',
     duration: 4,
     endDatetime: '20240907T220000',
-    startDatetime: '20240907T180000',
+    startDatetime: '20240907T170000',
     title: 'Templeton-Christmann Wedding',
     timezone: 'America/Chicago'
   }

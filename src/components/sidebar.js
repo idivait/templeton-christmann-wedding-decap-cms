@@ -12,7 +12,7 @@ export const SidebarImage = ({image, alt, className, children})=>{
                 fluid={image.childImageSharp.fluid}
                 alt={alt}
             />
-            {!children && (
+            {!children && alt && (
                 <AltOverlay>{alt}</AltOverlay>
             ) || (
                 children

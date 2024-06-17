@@ -4,9 +4,9 @@ import { Link } from "gatsby"
 const Nav = ()=>{
     const navLinks = [
         // { path: `/registry`, name: `Registry`},
-        { path: `/rsvp`, name: `RSVP`, external: true},
         // { path: `/about`, name: `About Eureka`},
-        // { path: `/faq/`, name: `FAQs`},
+        { path: `/faq/`, name: `FAQs`, external: true},
+        { path: `/rsvp`, name: `RSVP`, external: true},
       ]
     return (
         <ul className="basis-1/4 self-right flex flex-row gap-4 text-sm md:justify-end mx-1">

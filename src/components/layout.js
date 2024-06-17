@@ -21,9 +21,9 @@ const Layout = ({ location, title, children }) => {
         {children}
       </main>
       <footer className="text-center">
-        © {new Date().getFullYear()}, Built by
+        © {new Date().getFullYear()}, Website built by
         {` `}
-        <a className="text-blush" href="https://www.idiva.it">iDiva.IT</a>
+        <a className="text-blush" href="https://www.idiva.it">iDiva.IT</a> with logo design by <a className="text-blush" href="https://www.chadagurley.com/">Chad Gurley.</a>
       </footer>
     </div>
   )

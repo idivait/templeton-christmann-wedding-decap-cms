@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Page from "../components/page"
+import FAQPage from "./faq"
 import { ActionButtonList } from "../components/buttons"
 import { SidebarContent, SidebarImage } from "../components/sidebar"
 import { HalfLine } from "../components/text"
@@ -34,7 +35,7 @@ const Index = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle} page="About">
       <Page className="text-center">
-          <SidebarImage image={data.primaryImage} alt="Logo Design by Chad Gurley">
+          <SidebarImage image={data.primaryImage} className="basis-auto w-full bg-white content-center rounded">
           </SidebarImage>
           <SidebarContent>
             <p>You are invited to</p>
@@ -55,6 +56,8 @@ Saturday, September 7th, 2024 at 5pm
             We will be exchanging vows in a small private ceremony on September 7th, 2024 in Eureka Springs, Arkansas.
             </p>
             <p>Please join us for our wedding reception.</p>
+            <HalfLine/>
+            <h3>More information will be available soon&trade;, please check back.</h3>
             <p className="font-bold">Please RSVP before <span className="text-blush">August 7th.</span></p>
             <ActionButtonList />
           </SidebarContent>
