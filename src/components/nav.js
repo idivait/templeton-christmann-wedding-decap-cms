@@ -5,7 +5,7 @@ const Nav = ()=>{
     const navLinks = [
         // { path: `/registry`, name: `Registry`},
         // { path: `/about`, name: `About Eureka`},
-        { path: `/faq/`, name: `FAQs`, external: true},
+        { path: `/faq/`, name: `FAQs`},
         { path: `/rsvp`, name: `RSVP`, external: true},
       ]
     return (

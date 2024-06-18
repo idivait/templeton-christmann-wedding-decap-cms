@@ -57,7 +57,7 @@ Saturday, September 7th, 2024 at 5pm
             </p>
             <p>Please join us for our wedding reception.</p>
             <HalfLine/>
-            <h3>More information will be available soon&trade;, please check back.</h3>
+            <h3>More information will be available Soon&trade;, please check back.</h3>
             <p className="font-bold">Please RSVP before <span className="text-blush">August 7th.</span></p>
             <ActionButtonList />
           </SidebarContent>

@@ -2,13 +2,14 @@ import * as React from "react"
 import Img from "gatsby-image"
 import {AltOverlay} from "./image"
 
-export const SidebarImage = ({image, alt, className, children})=>{
+export const SidebarImage = ({image, alt, className, children, aspect})=>{
     const styles = `basis-full ${className}`
+    const imageStyles = `${aspect}`
     return (
         <aside className={styles}>
             <div className="bg-purple rounded overflow-hidden">
             <Img
-                className=""
+                className={imageStyles}
                 fluid={image.childImageSharp.fluid}
                 alt={alt}
             />

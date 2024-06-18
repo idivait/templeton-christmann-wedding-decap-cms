@@ -20,7 +20,7 @@ const Layout = ({ location, title, children }) => {
       <main className="container mx-auto mt-8">
         {children}
       </main>
-      <footer className="text-center">
+      <footer className="text-center m-4">
         © {new Date().getFullYear()}, Website built by
         {` `}
         <a className="text-blush" href="https://www.idiva.it">iDiva.IT</a> with logo design by <a className="text-blush" href="https://www.chadagurley.com/">Chad Gurley.</a>

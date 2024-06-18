@@ -43,6 +43,9 @@ export const ActionButtonList = () => (
       <li className="col-span-2 w-full">
         <Button link="/rsvp">Submit Your RSVP</Button>
       </li>
+      <li className="col-span-2 w-full">
+        <Button className="bg-navy" link="/faq">Read the FAQs</Button>
+      </li>
       <li>
         <AddToCalendar />
       </li>

@@ -20,7 +20,12 @@ const FAQPage = ({ data, location }) => {
     { href: "#dress", title: "Dress Code" },
     { href: "#lodging", title: "Lodging"}
   ]
-  const pinWidth = 700;
+
+  const PageTitle = ({children, id})=>(
+    <h2 className="mt-6" id={id}>
+      {children}
+    </h2>
+  )
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -30,17 +35,20 @@ const FAQPage = ({ data, location }) => {
           <li className="p-2"><a href={href}>{title}</a></li>
         ))}
       </ul>
-      <Page id="registry">
-        <SidebarImage image={data.houseImage} alt="9 Kingshighway" className="content-start lg:content-center  sm:pr-4">
+      <Page>
+        <SidebarImage image={data.houseImage} alt="9 Kingshighway" className="content-start sm:pr-4">
             <AltOverlay>Our 1900 house in Eureka.</AltOverlay>
         </SidebarImage>
         <SidebarContent className="basis-1/2 md:basis-full md:grow sm:basis-full">
-        <h2>Do you have a Registry?</h2>
+        <PageTitle id="registry">Do you have a Registry?</PageTitle>
         <HalfLine align="left" />
-        <p>We ask only your support and presence, but if you wish to give a gift, we would be honored to receive funds to help us in our journey as brand new home owners. We bought an old house (built in 1900) together last summer - There is much that needs updating (especially in the kitchen and basement) and all of our current discretionary funds are going towards making this house a home for us.
+        <p>We ask only your support and presence, but if you wish to give a gift, we would be honored to receive funds or gift cards to home improvement stores (Ace Hardware, Lowe's or Home Depot) to help us in our journey as brand new home owners. 
+        </p>
+        <p>We bought an old house (built in 1900) together last summer - There is much that needs updating, especially in the kitchen and basement, and all of our current discretionary funds are going towards making this house a home for us.
         </p>
         <p>If you wish to contribute digitally, our Venmo is <a className="text-blush" href={venmo.url}>{venmo.usn}</a>. We also will have a table for gifts at the reception if you feel like surprising us.</p>
-        <Button link={venmo.url} className="bg-navy pt-2 pl-2 mt-4 w-auto inline-flex">
+        <div className="grid mt-4 grid-cols-3 auto-rows-auto gap-4 mb-0 text-center">
+        <Button link={venmo.url} className="pt-2 pl-2 mt-4 w-auto inline-flex col-span-3">
             <Img 
                 fluid={data.venmoImage.childImageSharp.fluid}
                 alt="Venmo"
@@ -48,32 +56,40 @@ const FAQPage = ({ data, location }) => {
             />
             Send a Cash Gift
         </Button>
+        <Button className="bg-navy text-sm" link="https://www.acehardware.com/gift-cards">
+          Ace Hardware
+        </Button>
+        <Button className="bg-navy text-sm" link="https://www.buyatab.com/custom/lowes/?page=egift">
+          Lowe's
+        </Button>
+        <Button className="bg-navy text-sm" link="https://www.homedepot.com/c/gift-cards">
+          Home Depot
+        </Button>
+        </div>
         </SidebarContent>
       </Page>
-      <Page mobiledirection="flex-col-reverse" id="dress">
-        <div className="basis-1/2 w-full sm:basis-full">
-        <a  data-pin-do="embedBoard" data-pin-board-width={pinWidth} data-pin-scale-height="200" data-pin-scale-width="100" href="https://www.pinterest.com/bryarstorm/snappy-casual/">
-          "Snappy Casual" Womens Pinterest Board
-        </a>
-        <a  data-pin-do="embedBoard" data-pin-board-width={pinWidth} data-pin-scale-height="200" data-pin-scale-width="100" href="https://www.pinterest.com/mjhaffield/mens-snappy-casual/">
-          "Snappy Casual" Womens Pinterest Board
-        </a>
+      <Page>
+        <div className="w-full sm:basis-full">
+        <SidebarImage image={data.dressImage} className="content-start lg:content-center sm:pr-4" aspect="aspect-video sm:aspect-square">
+          <div className="text-center text-sm p-1">
+            Photo by <a className="text-orange" href="https://unsplash.com/@micheile?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">micheile henderson</a> on <a className="text-orange" href="https://unsplash.com/photos/clothes-hanging-on-white-rack-FpPcoOAk5PI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash.</a>
+          </div>
+        </SidebarImage>
         </div>
-        <SidebarContent className="basis-3/4 grow md:basis-full md:grow sm:basis-full">
-          <h2>What should I wear?</h2>
+        <SidebarContent className="">
+          <PageTitle id="dress">What should I wear?</PageTitle>
           <HalfLine align="left"/>
           <p>Dress code is "snappy casual": Informal, yet stylish. Dressier than a t-shirt, old jeans and sneakers but not as formal as black tie. Examples for either gender would be slacks with a shirt or polo, a cocktail dress, and a sports jacket with nice jeans. Think business casual, but for a wedding.</p>
-          <p>See embedded pinterest boards for examples.</p>
         </SidebarContent>
       </Page>
-      <Page id="lodging">
-      <SidebarImage image={data.lodgingImage} className="content-start lg:content-center  sm:pr-4">
-  
+      <Page>
+      <SidebarImage image={data.lodgingImage} aspect="aspect-video sm:aspect-square" className="content-start lg:content-center  sm:pr-4">
+  <div className="text-center text-sm p-1">Photo by <a className="text-orange" href="https://www.flickr.com/photos/cwsteeds/">Clinton Steeds on Flickr.</a></div>
         </SidebarImage>
         <SidebarContent>
-          <h2>Where should I stay?</h2>
-          <HalfLine />
-          <p>Eureka has a plethora of BnBs and hotels. We will have more specific recommendations soon, but in the meantime if you're looking to book, the CAPC has a good list to get started:</p>
+          <PageTitle id="lodging">Where should I stay?</PageTitle>
+          <HalfLine align="left" />
+          <p>Eureka has a plethora of BnBs and hotels. September is a very busy time in Eureka, so if you're travelling, we would recommend booking early. We will have more specific recommendations soon, but in the meantime if you're looking to book, the CAPC has a good list to get started:</p>
           <Button link="https://www.visiteurekasprings.com/category/where-to-stay/" className="bg-navy pt-2 pl-2 mt-4 w-auto inline-flex" >Eureka Springs Lodging</Button>
         </SidebarContent>
       </Page>
@@ -112,6 +128,13 @@ export const pageQuery = graphql`
           ...GatsbyImageSharpFluid
         }
       }
+    }
+    dressImage: file(relativePath: {eq: "micheile-henderson-FpPcoOAk5PI-unsplash.jpg"}){
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
     }
   }
 `
